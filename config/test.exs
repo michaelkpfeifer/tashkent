@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :tzs, TZS.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "scratch",
+  password: "scratch",
   database: "tzs_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
