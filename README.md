@@ -28,26 +28,32 @@ of scope of the current document.
 3. Get the Elixir dependencies required for running the application
    and compile them
 
-    `$ cd tashkent`
-
-    `$ mix deps.get`
-
-    `$ mix deps.compile`
+    ```
+    $ cd tashkent
+    $ mix deps.get
+    $ mix deps.compile
+    ```
 
 3. Create the development database
 
-    `$ mix ecto.create`
+    ```
+    $ mix ecto.create
+    ```
 
 4. Run the migrations
 
-    `$ mix ecto.migrate`
+    ```
+    $ mix ecto.migrate
+    ```
 
     The first migration installs the PostGIS extension for the newly
     created database.
 
 5. Download the timezone data
 
-    `$ wget https://github.com/evansiroky/timezone-boundary-builder/releases/download/2018d/timezones-with-oceans.shapefile.zip`
+    ```
+    $ wget https://github.com/evansiroky/timezone-boundary-builder/releases/download/2018d/timezones-with-oceans.shapefile.zip`
+    ```
 
     Depending on the speed of your internet connection, this may take
     some time. Note that the `wget` command above downloads the
@@ -56,13 +62,12 @@ of scope of the current document.
 
 6. Import the timezone data
 
-    `$ unzip timezones-with-oceans.shapefile.zip`
-
-    `$ (cd dist; shp2pgsql -d -I -s 4326 -g polygon combined-shapefile-with-oceans.shp timezone_polygons | psql -U scratch -h localhost tashkent_dev)`
-
-    `$ rm timezones-with-oceans.shapefile.zip`
-
-    `$ rm -r dist`
+    ```
+    $ unzip timezones-with-oceans.shapefile.zip
+    $ (cd dist; shp2pgsql -d -I -s 4326 -g polygon combined-shapefile-with-oceans.shp timezone_polygons | psql -U scratch -h localhost tashkent_dev)
+    $ rm timezones-with-oceans.shapefile.zip
+    $ rm -r dist
+    ```
 
     Make sure that the options given to the `psql`command reflect your
     database settings. You will be asked for your database password
@@ -79,11 +84,15 @@ expect.
 
 1. Open a new terminal and run the Phoenix server
 
-    `$ mix phx.server`
+    ```
+    $ mix phx.server
+    ```
 
 2. Create an http request
 
-    `$ curl --header "Content-Type: application/json" --request POST --data '{"latitude":"41.2995","longitude":"69.2401"}' http://localhost:4010/api/timezone/lookup`
+    ```
+    $ curl --header "Content-Type: application/json" --request POST --data '{"latitude":"41.2995","longitude":"69.2401"}' http://localhost:4010/api/timezone/lookup
+    ```
 
     Make sure the hostname is correct and the port matches your
     development configuration. This request should return
