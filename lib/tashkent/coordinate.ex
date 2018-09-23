@@ -8,7 +8,7 @@ defmodule Tashkent.Coordinate do
     field(:longitude, :float)
   end
 
-  def changeset(coordinate, params) do
+  def changeset(_coordinate, params) do
     %Tashkent.Coordinate{}
     |> cast(params, [:latitude, :longitude])
     |> validate_required([:latitude, :longitude])
