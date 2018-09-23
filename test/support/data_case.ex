@@ -1,4 +1,4 @@
-defmodule TZS.DataCase do
+defmodule Tashkent.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,20 +16,20 @@ defmodule TZS.DataCase do
 
   using do
     quote do
-      alias TZS.Repo
+      alias Tashkent.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import TZS.DataCase
+      import Tashkent.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(TZS.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Tashkent.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(TZS.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Tashkent.Repo, {:shared, self()})
     end
 
     :ok

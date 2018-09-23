@@ -1,11 +1,11 @@
-defmodule TZSWeb.Router do
-  use TZSWeb, :router
+defmodule TashkentWeb.Router do
+  use TashkentWeb, :router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/api", TZSWeb do
+  scope "/api", TashkentWeb do
     pipe_through :api
 
     post "/timezone/lookup", TimezoneController, :lookup

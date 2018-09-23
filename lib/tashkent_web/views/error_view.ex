@@ -1,5 +1,5 @@
-defmodule TZSWeb.ErrorView do
-  use TZSWeb, :view
+defmodule TashkentWeb.ErrorView do
+  use TashkentWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

@@ -1,5 +1,5 @@
-defmodule TZS.Repo do
-  use Ecto.Repo, otp_app: :tzs
+defmodule Tashkent.Repo do
+  use Ecto.Repo, otp_app: :tashkent
 
   @doc """
   Dynamically loads the repository url from the

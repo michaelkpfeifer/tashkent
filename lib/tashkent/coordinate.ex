@@ -1,4 +1,4 @@
-defmodule TZS.Coordinate do
+defmodule Tashkent.Coordinate do
   require Logger
   use Ecto.Schema
   import Ecto.Changeset
@@ -9,7 +9,7 @@ defmodule TZS.Coordinate do
   end
 
   def changeset(coordinate, params) do
-    %TZS.Coordinate{}
+    %Tashkent.Coordinate{}
     |> cast(params, [:latitude, :longitude])
     |> validate_required([:latitude, :longitude])
     |> validate_number(

@@ -1,4 +1,3 @@
 ExUnit.start()
 
-Ecto.Adapters.SQL.Sandbox.mode(TZS.Repo, :manual)
-
+Ecto.Adapters.SQL.Sandbox.mode(Tashkent.Repo, :manual)

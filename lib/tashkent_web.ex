@@ -1,12 +1,12 @@
-defmodule TZSWeb do
+defmodule TashkentWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use TZSWeb, :controller
-      use TZSWeb, :view
+      use TashkentWeb, :controller
+      use TashkentWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,24 +19,24 @@ defmodule TZSWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: TZSWeb
+      use Phoenix.Controller, namespace: TashkentWeb
       import Plug.Conn
-      import TZSWeb.Router.Helpers
-      import TZSWeb.Gettext
+      import TashkentWeb.Router.Helpers
+      import TashkentWeb.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/tzs_web/templates",
-                        namespace: TZSWeb
+      use Phoenix.View, root: "lib/tashkent_web/templates",
+                        namespace: TashkentWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
 
-      import TZSWeb.Router.Helpers
-      import TZSWeb.ErrorHelpers
-      import TZSWeb.Gettext
+      import TashkentWeb.Router.Helpers
+      import TashkentWeb.ErrorHelpers
+      import TashkentWeb.Gettext
     end
   end
 
@@ -51,7 +51,7 @@ defmodule TZSWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import TZSWeb.Gettext
+      import TashkentWeb.Gettext
     end
   end
 

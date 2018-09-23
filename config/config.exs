@@ -6,16 +6,16 @@
 use Mix.Config
 
 # General application configuration
-config :tzs,
-  namespace: TZS,
-  ecto_repos: [TZS.Repo]
+config :tashkent,
+  namespace: Tashkent,
+  ecto_repos: [Tashkent.Repo]
 
 # Configures the endpoint
-config :tzs, TZSWeb.Endpoint,
+config :tashkent, TashkentWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "J5wdSxInL9SOz8NhYT1sYtgwKm+v9gS8dPZAgf9M+Ht7T9E+zCx63/5ArcxcnJOD",
-  render_errors: [view: TZSWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: TZS.PubSub,
+  render_errors: [view: TashkentWeb.ErrorView, accepts: ~w(json)],
+  pubsub: [name: Tashkent.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

@@ -1,4 +1,4 @@
-defmodule TZSWeb.ChannelCase do
+defmodule TashkentWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule TZSWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint TZSWeb.Endpoint
+      @endpoint TashkentWeb.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(TZS.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Tashkent.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(TZS.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Tashkent.Repo, {:shared, self()})
     end
     :ok
   end

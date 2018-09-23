@@ -1,4 +1,4 @@
-defmodule TZSWeb.ConnCase do
+defmodule TashkentWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,18 +19,18 @@ defmodule TZSWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      import TZSWeb.Router.Helpers
+      import TashkentWeb.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint TZSWeb.Endpoint
+      @endpoint TashkentWeb.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(TZS.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Tashkent.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(TZS.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Tashkent.Repo, {:shared, self()})
     end
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end

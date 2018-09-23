@@ -1,4 +1,4 @@
-defmodule TZS.Repo.Migrations.CreateTimezonePolygonsTable do
+defmodule Tashkent.Repo.Migrations.CreateTimezonePolygonsTable do
   use Ecto.Migration
 
   def up do

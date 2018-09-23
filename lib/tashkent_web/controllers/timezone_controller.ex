@@ -1,9 +1,9 @@
-defmodule TZSWeb.TimezoneController do
+defmodule TashkentWeb.TimezoneController do
   require Logger
-  use TZSWeb, :controller
+  use TashkentWeb, :controller
 
   def lookup(conn, params) do
-    changeset = TZS.Coordinate.changeset(%{}, params)
+    changeset = Tashkent.Coordinate.changeset(%{}, params)
 
     case changeset do
       %{
@@ -17,7 +17,7 @@ defmodule TZSWeb.TimezoneController do
         where_clause = "ST_Intersects(ST_GeomFromText(\'#{coordinate_string}\', 4326), polygon)"
         query = "SELECT tzid FROM timezone_polygons WHERE #{where_clause};"
 
-        {:ok, result_set} = Ecto.Adapters.SQL.query(TZS.Repo, query, [])
+        {:ok, result_set} = Ecto.Adapters.SQL.query(Tashkent.Repo, query, [])
         timezone_id = List.first(List.first(result_set.rows))
 
         conn

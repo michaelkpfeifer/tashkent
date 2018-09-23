@@ -1,4 +1,4 @@
-defmodule TZS.Repo.Migrations.CreatePostgisExtension do
+defmodule Tashkent.Repo.Migrations.CreatePostgisExtension do
   use Ecto.Migration
 
   def up do
