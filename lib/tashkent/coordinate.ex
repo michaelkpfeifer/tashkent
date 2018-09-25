@@ -1,4 +1,8 @@
 defmodule Tashkent.Coordinate do
+  @moduledoc """
+  Type casts and validation for coordinates.
+  """
+
   require Logger
   use Ecto.Schema
   import Ecto.Changeset

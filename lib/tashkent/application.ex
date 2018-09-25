@@ -1,4 +1,8 @@
 defmodule Tashkent.Application do
+  @moduledoc """
+  Main application module.
+  """
+
   use Application
 
   # See https://hexdocs.pm/elixir/Application.html
