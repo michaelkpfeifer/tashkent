@@ -26,9 +26,11 @@ defmodule TashkentWeb.TimezoneController do
       _ ->
         error_map = %{
           validationErrors:
-            changeset.errors
-            |> Enum.map(fn {param, {message, _options}} -> {param, message} end)
-            |> Enum.into(%{})
+            Enum.into(
+              changeset.errors,
+              %{},
+              fn {param, {message, _options}} -> {param, message} end
+            )
         }
 
         conn
