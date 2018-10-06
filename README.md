@@ -52,7 +52,7 @@ of scope of the current document.
 5. Download the timezone data
 
     ```
-    $ wget https://github.com/evansiroky/timezone-boundary-builder/releases/download/2018d/timezones-with-oceans.shapefile.zip`
+    $ wget https://github.com/evansiroky/timezone-boundary-builder/releases/download/2018d/timezones-with-oceans.shapefile.zip
     ```
 
     Depending on the speed of your internet connection, this may take
