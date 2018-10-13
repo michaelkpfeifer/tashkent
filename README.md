@@ -91,7 +91,7 @@ expect.
 2. Create an http request
 
     ```
-    $ curl --header "Content-Type: application/json" --request POST --data '{"latitude":"41.2995","longitude":"69.2401"}' http://localhost:4010/api/timezone/lookup
+    $ curl --header "Content-Type: application/json" --request POST --data '{"latitude":"41.2995","longitude":"69.2401"}' http://localhost:4010/api/v1/timezone/lookup
     ```
 
     Make sure the hostname is correct and the port matches your

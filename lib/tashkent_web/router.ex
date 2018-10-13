@@ -5,9 +5,9 @@ defmodule TashkentWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", TashkentWeb do
+  scope "/api/v1", TashkentWeb do
     pipe_through :api
 
-    post "/timezone/lookup", TimezoneController, :lookup
+    post "/timezone/lookup", V1.TimezoneController, :lookup
   end
 end

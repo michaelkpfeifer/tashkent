@@ -1,4 +1,4 @@
-defmodule TashkentWeb.TimezoneController do
+defmodule TashkentWeb.V1.TimezoneController do
   require Logger
   use TashkentWeb, :controller
 
