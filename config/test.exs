@@ -11,7 +11,6 @@ config :logger, level: :warn
 
 # Configure your database
 config :tashkent, Tashkent.Repo,
-  adapter: Ecto.Adapters.Postgres,
   username: "scratch",
   password: "scratch",
   database: "tashkent_test",

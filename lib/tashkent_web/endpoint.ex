@@ -1,7 +1,9 @@
 defmodule TashkentWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :tashkent
+  use Phoenix.Endpoint,
+    otp_app: :tashkent
 
-  socket "/socket", TashkentWeb.UserSocket
+  socket "/socket", TashkentWeb.UserSocket,
+    websocket: true # or list of options
 
   # Serve at "/" the static files from "priv/static" directory.
   #

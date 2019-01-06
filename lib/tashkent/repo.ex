@@ -1,5 +1,7 @@
 defmodule Tashkent.Repo do
-  use Ecto.Repo, otp_app: :tashkent
+  use Ecto.Repo,
+    otp_app: :tashkent,
+    adapter: Ecto.Adapters.Postgres
 
   @doc """
   Dynamically loads the repository url from the

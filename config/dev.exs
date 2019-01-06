@@ -38,7 +38,6 @@ config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
 config :tashkent, Tashkent.Repo,
-  adapter: Ecto.Adapters.Postgres,
   username: "scratch",
   password: "scratch",
   database: "tashkent_dev",
