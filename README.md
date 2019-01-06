@@ -8,9 +8,9 @@ coordinate and returns the time zone corresponding to the coordinate.
 ## Prerequisites
 
 Tashkent is implemented as a Phoenix application. In order to run the
-service, you need Elixir and Phoenix installed. Timezone data is
-stored in a PostgreSQL database and the PostGIS extenstion must be
-avaliable on your system.
+service, you need Elixir and Phoenix 1.4.0 or later
+installed. Timezone data is stored in a PostgreSQL database and the
+PostGIS extenstion must be avaliable on your system.
 
 ## Installation
 
